@@ -90,7 +90,7 @@ const Footer = () => {
                     <a href="/study-abroad">Study Abroad</a>
                   </li>
                   <li>
-                    <a href="/migration">Migration Services</a>
+                    <a href="/migrations">Migration Services</a>
                   </li>
                   <li>
                     <a href="/jobs-abroad">Overseas Job Placement</a>
