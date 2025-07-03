@@ -1,0 +1,225 @@
+/* Tablet: 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+  }
+
+  .container {
+    width: 95%;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  .navContent {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+  }
+
+  .homeSection {
+  height: 100vh; /* Full viewport height */
+  background-image: url('../assets/heroImage.jpg'); /* Update this path */
+  background-size:cover; /* Ensures it covers entire area */
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  color: white; /* Optional: text color */
+  padding: 0px 70px 0px 0px;
+
+}
+  .paper {
+    position: absolute;
+    z-index: 200;
+    right: 150px;
+    top: 150px;
+  }
+  .contactUs button {
+    width: 180px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: rgb(62, 88, 220);
+    color: antiquewhite;
+    border: none;
+  }
+
+  .p-dropdown-panel {
+    width: 350px !important;
+    margin-top: 15px;
+    padding: 10px 20px !important;
+    background-color: #fff !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+  }
+
+  .heroh1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    text-align: center;
+    color: rgb(56, 56, 56);
+    font-family: 'syne';
+    padding: 10px 0;
+  }
+
+  .heroh1 span {
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    color: rgb(62, 88, 220);
+  }
+
+  .heroh2,
+  .heroh3 {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    text-align: center;
+    font-family: 'syne';
+    color: rgb(56, 56, 56);
+  }
+
+  .paper {
+    position: static;
+    transform: scale(0.9);
+    margin: 20px auto;
+  }
+
+  .globalSolutions {
+    font-size: 2rem;
+    text-align: center;
+    color: rgb(56, 56, 56);
+  }
+
+  .globalSolutions p {
+    font-size: 1.2rem;
+    color: #444;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .solContent {
+    flex-direction: column-reverse;
+    gap: 25px;
+    padding: 20px 0;
+  }
+
+  .solLeft,
+  .solRight {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .solLeft {
+    background-color: rgb(62, 88, 220);
+    color: antiquewhite;
+  }
+
+  .solRight {
+    border: 1px solid rgba(128, 128, 128, 0.292);
+  }
+
+  .mileContainer {
+    flex-direction: column-reverse;
+    padding: 20px 10px;
+    gap: 20px;
+  }
+
+  .mileImg {
+    width: 100%;
+    height: 350px;
+    background-image: url("../assets/milestone.jpg");
+    background-size: cover;
+    background-position: center;
+    background-position-y: 10%;
+    
+    border-radius: 10px;
+  }
+
+  .cardBox {
+    width: 100%;
+    font-size: 16px;
+    padding: 25px;
+    background-color: rgb(62, 88, 220);
+    color: antiquewhite;
+    border-radius: 16px;
+    margin-bottom: 30px;
+  }
+
+  .aboutUscontainer {
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+
+  .aboutUsImg {
+    height: 350px;
+    width: 100%;
+    background-image: url("../assets/aboutUsP.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+  }
+
+  .aboutUsContent {
+    padding: 15px 10px;
+    font-size: 15px;
+  }
+
+  .people {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0;
+  }
+
+  .leftperson {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .migrationContainer {
+    padding: 15px 10px;
+  }
+
+  .migrationbnr {
+    flex-direction: column-reverse;
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    background-color: rgb(62, 88, 220);
+    border-radius: 20px;
+    margin: 0 10%;
+  }
+
+  .studyimg,
+  .studyimg1,
+  .studyimg2 {
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+  }
+
+  .studyimg {
+    background-image: url("../assets/studyAbroadImg.png");
+  }
+
+  .studyimg1 {
+    background-image: url("../assets/oversea.png");
+  }
+
+  .studyimg2 {
+    background-image: url("../assets/workers.png");
+  }
+
+  .studyc {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .studyc h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 0;
+  }
+}
