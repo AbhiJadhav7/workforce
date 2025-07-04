@@ -102,15 +102,14 @@ const Footer = () => {
                 <ul>
                   <li>
                     <a href="">
-                      Head Office: 4th Floor, VRBS Towers, Pune, Maharashtra,
-                      India{" "}
+                      Head Office: office no. 310, Prem Lok Plaza, <br />Kalas Area, Vishrantwadi, Pune-411015,MaharashtraIndia{" "}
                     </a>
                   </li>
                   <li>
-                    <a href="#">Phone: +91 98765 43210</a>
+                    <a href="#">Phone: (UK)+44 07586536565 / (IN)+91 8551006536</a>
                   </li>
                   <li>
-                    <a href="#">Email: contact@vrbsglobal.com</a>
+                    <a href="#">Email: contact@vrbs.in</a>
                   </li>
                 </ul>
               </div>
