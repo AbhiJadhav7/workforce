@@ -1,12 +1,14 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Dropdown } from "primereact/dropdown";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 
 const Navbar = () => {
   const dropdownRef = useRef(null);
   const navigate = useNavigate();
+  const { pathname } = useLocation(); // ✅ Track current path
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1224);
@@ -25,10 +27,19 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // ✅ This handles both navigation and scroll-to-top on same path
+  const goToPage = (path) => {
+    setMobileMenuOpen(false); // close mobile menu
+    if (pathname === path) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate(path);
+    }
+  };
+
   const handleServiceChange = (e) => {
-    navigate(e.value.url);
+    goToPage(e.value.url);
     setMobileDropdownOpen(false);
-    setMobileMenuOpen(false);
   };
 
   const handleMouseEnter = () => {
@@ -42,9 +53,8 @@ const Navbar = () => {
   return (
     <div className="container">
       <div className="navbar">
-        <div className="navLogo">
-         <Link to='/'>
-          <p>VRBS</p></Link>
+        <div className="navLogo" onClick={() => goToPage("/")}>
+          <p>VRBS</p>
         </div>
 
         <div
@@ -55,9 +65,7 @@ const Navbar = () => {
         </div>
 
         <div className={`navContent ${mobileMenuOpen ? "open" : ""}`}>
-          <div onClick={() => setMobileMenuOpen(false)}>
-            <Link to="/">Home</Link>
-          </div>
+          <div onClick={() => goToPage("/")}>Home</div>
 
           <div
             className="navbarServiceBlock"
@@ -75,18 +83,16 @@ const Navbar = () => {
               placeholder="Our Services"
               className="navbarServices"
               onChange={handleServiceChange}
-              panelClassName={mobileDropdownOpen ? "p-dropdown-panel open-mobile" : ""}
+              panelClassName={
+                mobileDropdownOpen ? "p-dropdown-panel open-mobile" : ""
+              }
             />
           </div>
 
-          <div onClick={() => setMobileMenuOpen(false)}>
-            <Link to="/about">About Us</Link>
-          </div>
+          <div onClick={() => goToPage("/about")}>About Us</div>
 
-          <div className="contactUs" onClick={() => setMobileMenuOpen(false)}>
-            <Link to="/contact-us">
-              <button>Contact Us</button>
-            </Link>
+          <div className="contactUs" onClick={() => goToPage("/contact-us")}>
+            <button>Contact Us</button>
           </div>
         </div>
       </div>
