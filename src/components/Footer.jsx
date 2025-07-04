@@ -102,7 +102,7 @@ const Footer = () => {
                 <ul>
                   <li>
                     <a href="">
-                      Head Office: office no. 310, Prem Lok Plaza, <br />Kalas Area, Vishrantwadi, Pune-411015,MaharashtraIndia{" "}
+                      Head Office: office no. 310, Prem Lok Plaza, <br />Vishrantwadi, Pune-411015,MaharashtraIndia{" "}
                     </a>
                   </li>
                   <li>
